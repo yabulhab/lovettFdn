@@ -1,0 +1,25 @@
+
+<div ng-controller="MenuCtrl">
+	<!-- menu -->
+	<div ng-show="visibleMenu"  class="menu">
+		<div class="menuHead">
+			Menu
+		</div>
+		<ul>
+			<li class="menuItem">about</li>
+			<li class="menuItem">success stories</li>
+			<li class="menuItem">elementary drama fund</li>
+			<li class="menuItem">apply</li>
+		</ul>
+	</div>	
+
+	<!-- menu trigger -->
+	<div ng-click="toggleFunc()" class="menuTrigger">
+		<p>MENU</p>
+		<img id="icon" src="./icon.png"> 
+	</div>
+
+</div>
+
+
+

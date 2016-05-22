@@ -1,5 +1,42 @@
 /* $ makes something a variable */
 .menu {
-  color: #880A04; }
+  height: 100%;
+  width: 100%;
+  background-color: #880A04;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  text-align: right; }
+
+.menuHead {
+  margin-right: 50px;
+  margin-top: 50px; }
+
+.menuItem {
+  text-decoration: none;
+  list-style-type: none;
+  margin-right: 50px; }
+
+.menuTrigger {
+  position: fixed;
+  z-index: 2; }
+
+#icon {
+  height: 20px;
+  width: 20px; }
+
+.main {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1; }
 
 /*# sourceMappingURL=style.css.map */
