@@ -1,9 +1,22 @@
 
-<div ng-controller="MenuCtrl">
+<div ng-controller="MenuCtrl">	
+
+	<!-- top navigation (logo + menuTrigger) -->
+	
+	<div class="topBar container">
+	
+		<!-- menu trigger section-->
+
+		<div ng-click="toggleFunc()" class="menuTrigger pull-right">
+			<div id="menuWord">menu</div>
+			<img id="hamburger" src="./hamburger.png"> 
+		</div>
+
+	</div>
+	
 	<!-- menu -->
 	<div ng-show="visibleMenu"  class="menu">
 		<div class="menuHead">
-			Menu
 		</div>
 		<ul>
 			<li class="menuItem">about</li>
@@ -13,11 +26,6 @@
 		</ul>
 	</div>	
 
-	<!-- menu trigger -->
-	<div ng-click="toggleFunc()" class="menuTrigger">
-		<p>MENU</p>
-		<img id="icon" src="./icon.png"> 
-	</div>
 
 </div>
 

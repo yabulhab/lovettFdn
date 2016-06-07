@@ -1,27 +1,77 @@
 /* $ makes something a variable */
 
 $red: #880A04;
+$freight: "freight-display-pro";
+
+.topBar {
+
+	height: 80px;
+	min-width: 100%;
+	background-color: yellow;
+	z-index: 2;
+	position: fixed;
+
+}
+
+.container {
+
+	padding-right: 150px;
+	padding-left: 150px;
+}
+
+
+//menu trigger
+
+.menuTrigger {
+
+	margin-top: 15px;
+	font-family: $freight;
+	font-weight: 700; 
+	font-style: normal;
+	font-size: 30px;
+	vertical-align: middle;
+	
+}
+
+.menuTrigger:hover{
+
+	cursor: pointer;
+}
+
+#menuWord {
+
+	display: inline-block;	
+	//vertical-align: middle;
+
+}
+
+#hamburger {
+	display: inline-block;
+	//vertical-align: middle;
+}
+
 
 // begin menu
+
 .menu {
 
-	height:100%;
-	width:100%;
-	background-color:$red;
-	color:white;
+	min-height: 100%;
+	width: 100%;
+	background-color: $red;
+	color: white;
 	position: fixed;
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
-	z-index:0;
-	text-align:right;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	text-align: right;
 
 }
 
 .menuHead {
-	margin-right:50px;
-	margin-top:50px;
+	margin-right: 50px;
+	margin-top: 50px;
 }
 
 
@@ -32,29 +82,34 @@ $red: #880A04;
 }
 
 
-//menu trigger
+// main body content of each page
 
-.menuTrigger {
-
-	position: fixed;
-	z-index: 2;
-
-}
-
-#icon {
-	height: 20px;
-	width: 20px;
-}
-
-// begin main content
 
 .main {
 	min-width:100%;
-	min-height:100%;
-	background-color:#fff;
 	position:relative;
-	top:0;
-	bottom:100%;
-	left:0;
-	z-index:1;
+	top:170px;
+	z-index:-1;
 }
+
+h1 {
+
+	text-align: right;
+	margin-top: 0px;
+	font-family: $freight;
+	font-size: 65px;
+	padding-right: 50px;
+
+}
+
+
+//img grids
+
+.gridImg {
+
+	padding: 2px;
+	float:right;
+	height: 33%;
+	width: 33%;
+}
+
