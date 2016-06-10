@@ -8,7 +8,7 @@
 		<!-- menu trigger section-->
 
 		<div ng-click="toggleFunc()" class="menuTrigger pull-right">
-			<div id="menuWord">menu</div>
+			<div id="menuWord" class="hidden-xs hidden-sm">menu</div>
 			<img id="hamburger" src="./hamburger.png"> 
 		</div>
 
@@ -16,13 +16,12 @@
 	
 	<!-- menu -->
 	<div ng-show="visibleMenu"  class="menu">
-		<div class="menuHead">
-		</div>
+<!-- 		<div class="menuHead"></div> -->
 		<ul>
-			<li class="menuItem">about</li>
-			<li class="menuItem">success stories</li>
-			<li class="menuItem">elementary drama fund</li>
-			<li class="menuItem">apply</li>
+			<a href="#"> <li class="menuItem">about</li> </a>
+			<a href="#"> <li class="menuItem">success stories</li> </a>
+			<a href="#"> <li class="menuItem">elementary drama fund</li> </a>
+			<a href="#"> <li class="menuItem">apply</li> </a>
 		</ul>
 	</div>	
 

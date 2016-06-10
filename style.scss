@@ -1,84 +1,109 @@
 /* $ makes something a variable */
 
+//colors
 $red: #880A04;
+$white: #ffffff;
+$grey: #F3F3F3;
+
+//fonts
 $freight: "freight-display-pro";
+$source: "source-sans-pro";
+
+body {
+
+	background-color: blue;
+}
 
 .topBar {
 
-	height: 80px;
-	min-width: 100%;
-	background-color: yellow;
-	z-index: 2;
-	position: fixed;
+		height: 80px;
+		min-width: 100%;
+		background-color: orange;
+		z-index: 2;
+		position: fixed;
 
 }
 
-.container {
+.darkContainer {
 
-	padding-right: 150px;
-	padding-left: 150px;
+		background-color: $grey;
+		margin-top: 50px;	
+
 }
 
+.lightContainer {
 
-//menu trigger
+
+}
+
+.containerContent {
+
+		padding: 50px;
+}
 
 .menuTrigger {
 
-	margin-top: 15px;
-	font-family: $freight;
-	font-weight: 700; 
-	font-style: normal;
-	font-size: 30px;
-	vertical-align: middle;
-	
+		margin-top: 15px;
+		font-family: $freight;
+		font-weight: 700; 
+		font-style: normal;
+		font-size: 30px;
+		vertical-align: middle;
+		
 }
 
 .menuTrigger:hover{
 
-	cursor: pointer;
+		cursor: pointer;
 }
 
 #menuWord {
 
-	display: inline-block;	
-	//vertical-align: middle;
+		display: inline-block;	
+		//vertical-align: middle;
 
 }
 
 #hamburger {
-	display: inline-block;
-	//vertical-align: middle;
+		display: inline-block;
+		//vertical-align: middle;
 }
 
 
-// begin menu
+	// begin menu
 
 .menu {
 
-	min-height: 100%;
-	width: 100%;
-	background-color: $red;
-	color: white;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 0;
-	text-align: right;
+		min-height: 100%;
+		//width: 100%;
+		background-color: $red;
+		color: $white;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 50%;
+		z-index: 0;
+		text-align: right;
 
 }
 
 .menuHead {
-	margin-right: 50px;
-	margin-top: 50px;
+		//margin-right: 50px;
+		margin-top: 50px;
+		padding-bottom: 50px;
 }
 
 
 .menuItem {
-	text-decoration:none;
-	list-style-type:none;
-	margin-right:50px;
+		text-decoration:none;
+		list-style-type:none;
+		//margin-right: 150px;
+		font-family: $source;
+		font-size: 25px;
+		font-weight: 300;
+		padding-top:10px;
+
 }
 
 
@@ -86,30 +111,154 @@ $freight: "freight-display-pro";
 
 
 .main {
-	min-width:100%;
-	position:relative;
-	top:170px;
-	z-index:-1;
-}
+		min-width:100%;
+		position:relative;
+		top:170px;
+		z-index:-1;
+	}
+
+//headings
 
 h1 {
 
-	text-align: right;
-	margin-top: 0px;
-	font-family: $freight;
-	font-size: 65px;
-	padding-right: 50px;
+		font-family: $freight;
+		font-size: 65px;
+		font-weight: 400;
+		//padding-right: 50px;
+
+}
+
+h2 {
+
+		text-align: center;
+		//margin-top: 50px;
+		margin-bottom: 40px;
+		font-family: $freight;
+		font-weight: 300;
+		font-size: 38px;
+		color: $red;
+
+}
+
+p {
+
+		font-family: $source;
+		font-weight: 400;
+		font-size: 18px;
+}
+
+
+.redBtn {
+
+		display:block;
+		height:100%;
+		width:100%;
+		border: 3px solid;
+		border-color: $red;
+		color: $red;
+		font-family: $source;
+		font-weight: 700;
+		font-size: 25px;
+		padding: 6px;
+		background-color: $white;
+
+}
+
+.redBtn:hover {
+
+		cursor: pointer;	
+		//background-color: yellow;
+		//color: yellow;
+		//border-color: yellow;
 
 }
 
 
-//img grids
+#homeBtn {
+
+		margin-top: 40px;
+
+}
 
 .gridImg {
 
-	padding: 2px;
-	float:right;
-	height: 33%;
-	width: 33%;
+		padding: 2px;
+		float: right;
+		height: 33%;
+		width: 33%;
 }
+
+
+	
+a {
+	text-decoration: none;
+	color:$white;
+
+}
+
+a:hover{
+	text-decoration: none;
+	cursor: pointer;
+	color: $white;
+}
+
+@media (max-width: 992px) {
+
+	.gridImg {
+		
+		width: 33%;
+	}
+
+	body {
+
+		background-color: yellow;
+	}
+
+	h1 {
+
+		font-size: 50px;
+	}
+
+}
+
+
+@media (max-width: 768px) {
+
+	body {
+		background-color: green;
+	}
+
+	.gridImg {
+		
+		width: 50%;
+	}
+
+	.container {
+		padding: 0px;
+		margin: 0px;
+	}
+
+
+	h1{
+
+		text-align: center;
+		top: 50%;
+		//margin: 5px;
+	}
+
+	#homeBtn {
+
+		min-width: 100%;
+		margin: 0px;
+		padding: 15px;
+		background-color: $red;
+		color: $white;
+		font-weight: 600;
+
+	}
+
+}
+
+
+
 

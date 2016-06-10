@@ -1,14 +1,20 @@
 /* $ makes something a variable */
+body {
+  background-color: blue; }
+
 .topBar {
   height: 80px;
   min-width: 100%;
-  background-color: yellow;
+  background-color: orange;
   z-index: 2;
   position: fixed; }
 
-.container {
-  padding-right: 150px;
-  padding-left: 150px; }
+.darkContainer {
+  background-color: #F3F3F3;
+  margin-top: 50px; }
+
+.containerContent {
+  padding: 50px; }
 
 .menuTrigger {
   margin-top: 15px;
@@ -29,25 +35,27 @@
 
 .menu {
   min-height: 100%;
-  width: 100%;
   background-color: #880A04;
-  color: white;
+  color: #ffffff;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 50%;
   z-index: 0;
   text-align: right; }
 
 .menuHead {
-  margin-right: 50px;
-  margin-top: 50px; }
+  margin-top: 50px;
+  padding-bottom: 50px; }
 
 .menuItem {
   text-decoration: none;
   list-style-type: none;
-  margin-right: 50px; }
+  font-family: "source-sans-pro";
+  font-size: 25px;
+  font-weight: 300;
+  padding-top: 10px; }
 
 .main {
   min-width: 100%;
@@ -56,16 +64,87 @@
   z-index: -1; }
 
 h1 {
-  text-align: right;
-  margin-top: 0px;
   font-family: "freight-display-pro";
   font-size: 65px;
-  padding-right: 50px; }
+  font-weight: 400; }
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "freight-display-pro";
+  font-weight: 300;
+  font-size: 38px;
+  color: #880A04; }
+
+p {
+  font-family: "source-sans-pro";
+  font-weight: 400;
+  font-size: 18px; }
+
+.redBtn {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border: 3px solid;
+  border-color: #880A04;
+  color: #880A04;
+  font-family: "source-sans-pro";
+  font-weight: 700;
+  font-size: 25px;
+  padding: 6px;
+  background-color: #ffffff; }
+
+.redBtn:hover {
+  cursor: pointer; }
+
+#homeBtn {
+  margin-top: 40px; }
 
 .gridImg {
   padding: 2px;
   float: right;
   height: 33%;
   width: 33%; }
+
+a {
+  text-decoration: none;
+  color: #ffffff; }
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff; }
+
+@media (max-width: 992px) {
+  .gridImg {
+    width: 33%; }
+
+  body {
+    background-color: yellow; }
+
+  h1 {
+    font-size: 50px; } }
+@media (max-width: 768px) {
+  body {
+    background-color: green; }
+
+  .gridImg {
+    width: 50%; }
+
+  .container {
+    padding: 0px;
+    margin: 0px; }
+
+  h1 {
+    text-align: center;
+    top: 50%; }
+
+  #homeBtn {
+    min-width: 100%;
+    margin: 0px;
+    padding: 15px;
+    background-color: #880A04;
+    color: #ffffff;
+    font-weight: 600; } }
 
 /*# sourceMappingURL=style.css.map */
