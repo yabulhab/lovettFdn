@@ -1,6 +1,11 @@
-/* $ makes something a variable */
 body {
   background-color: blue; }
+
+.main {
+  min-width: 100%;
+  position: relative;
+  top: 170px;
+  z-index: -1; }
 
 .topBar {
   height: 80px;
@@ -56,12 +61,6 @@ body {
   font-size: 25px;
   font-weight: 300;
   padding-top: 10px; }
-
-.main {
-  min-width: 100%;
-  position: relative;
-  top: 170px;
-  z-index: -1; }
 
 h1 {
   font-family: "freight-display-pro";
@@ -145,6 +144,9 @@ a:hover {
     padding: 15px;
     background-color: #880A04;
     color: #ffffff;
-    font-weight: 600; } }
+    font-weight: 600; }
+
+  .menu {
+    left: 0px; } }
 
 /*# sourceMappingURL=style.css.map */
