@@ -3,8 +3,10 @@
 
 //colors
 $red: #880A04;
+$deepRed: #6E0A04;
 $white: #ffffff;
 $grey: #F3F3F3;
+$purple:#3D1C53;
 
 //fonts
 $freight: "freight-display-pro";
@@ -14,40 +16,84 @@ $source: "source-sans-pro";
 
 body {
 
-	background-color: blue;
-
+	//background-color: blue;
+	min-width: 100%;
 }
 
 .main {
 
-	position:relative;
-	top:170px;
-	z-index:-1;
+	position: relative;
+	top:140px;
+	margin-bottom: 100px;
+	z-index: 0;
+	//background-color: orange;
+	width: 100%;
 }
 
 .topBar {
 
 	height: 80px;
 	min-width: 100%;
-	background-color: orange;
+	//background-color: $white;
 	z-index: 2;
 	position: fixed;
-	padding-right: 70px;
-
 }
 
 .darkContainer {
 
 	background-color: $grey;
 	margin-top: 50px;
-	min-width: 100%;	
+	width: 100%;
 
 }
 
 .containerContent {
 
-	padding: 50px;
+	padding: 100px;
 }
+
+.noPadding {
+
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.centered {
+
+	margin: 0 auto;
+}
+
+.bottomMargin {
+
+	margin-bottom: 50px;
+}
+
+hr {
+
+	color:$purple;
+	border: none;
+	height: 1px;
+	background-color: $purple;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+button:hover {
+	cursor:pointer;
+}
+
+//logo
+
+#logo {
+
+	width:15%;
+	display:inline;
+	margin-top: 15px;
+	float: left;
+}
+
 
 
 //menuTriggers
@@ -55,13 +101,9 @@ body {
 .menuTrigger {
 
 	margin-top: 15px;
-	font-family: $freight;
-	font-weight: 700; 
-	font-style: normal;
-	font-size: 30px;
-	//vertical-align: middle !important;
-	position: 5px;
-		
+	//background-color: yellow;
+	float: right;
+	position: relative;
 }
 
 .menuTrigger:hover{
@@ -73,10 +115,20 @@ body {
 
 	display: inline-block;	
 	height: 100%;
-	float: left;
-	background-color: purple;
-	text-align: center;
-	margin-right: 5px;
+	//background-color: purple;
+	text-align: center;	
+	font-family: $freight;
+	font-weight: 700; 
+	font-style: normal;
+	font-size: 30px;
+	padding-right: 8px;
+
+}
+
+#menuWord.open {
+
+	color: $white;
+	font-weight: 600; 
 
 }
 
@@ -84,7 +136,6 @@ body {
 
 	width: 30px;
 	height: 30px;
-	position: relative;
 	//margin: 50px auto;
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
@@ -95,9 +146,8 @@ body {
 	-o-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
 	display:inline-block;
-	float:right;
-	background-color: green;
-	margin-top: 10%;
+	//background-color: green;
+	vertical-align: middle;
 
 }
 
@@ -110,6 +160,7 @@ body {
 
 .burger span {
 
+	//z-index: auto;
 	display: block;
 	position: absolute;
 	height: 4px;
@@ -141,24 +192,26 @@ body {
 
 
 #s0.open {
-  top: 20px;
+  top: 10px;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -o-transform: rotate(135deg);
   transform: rotate(135deg);
+  background-color: $white;
 }
 
 #s1.open {
   opacity: 0;
-  left: -60px;
+  right: -60px;
 }
 
 #s2.open {
-  top: 20px;
+  top: 10px;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
+  background-color: $white;
 }
 
 
@@ -173,12 +226,16 @@ body {
 	top: 0px;
 	right: 0px;
 	bottom: 0px;
-	z-index: 0;
+	z-index: 1;
 	text-align: right;
-	padding: 50px;
-	padding-top: 150px;
-		
+	padding-top: 150px;		
+	width: 360px;
 
+}
+
+ul {
+
+	padding-left: 0px;
 }
 
 
@@ -191,12 +248,17 @@ body {
 	font-family: $source;
 	font-size: 20px;
 	font-weight: 300;
-	padding:20px;
-	background-color: purple;
+	background-color: $red;
 	min-width: 100%;
+	padding: 20px;
+	padding-right: 50px;
 
 }
 
+.menuItem:hover {
+
+	background-color: $deepRed;
+}
 
 
 //headings
@@ -204,7 +266,7 @@ body {
 h1 {
 
 	font-family: $freight;
-	font-size: 55px;
+	font-size: 400%;
 	font-weight: 400;
 	text-align: right;
 	margin-top: 0px;
@@ -220,9 +282,25 @@ h2 {
 	margin-bottom: 40px;
 	font-family: $freight;
 	font-weight: 300;
-	font-size: 38px;
+	font-size: 250%;
 	color: $red;
 
+}
+
+h3 {
+
+	font-family: $freight;
+	font-size: 250%;
+	font-weight: 300;
+	color: $purple;
+}
+
+
+h4 {
+
+	font-family: $source;
+	font-size: 150%;
+	font-weight: 600;
 }
 
 //paragraph styles
@@ -244,12 +322,8 @@ p {
 	border-color: $red;
 	color: $red;
 	font-family: $source;
-	font-weight: 700;
-	font-size: 30px;
-	padding-top: 6px;
-	padding-bottom: 6px;
-	padding-right: 35px;
-	padding-left: 35px;
+	font-weight: 600;
+	font-size: 200%;
 	background-color: $white;
 
 }
@@ -257,9 +331,6 @@ p {
 .redBtn:hover {
 
 	cursor: pointer;	
-	//background-color: yellow;
-	//color: yellow;
-	//border-color: yellow;
 
 }
 
@@ -267,21 +338,104 @@ p {
 #homeBtn {
 
 	margin-top: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.imageBtn {
+
+	background-color: rgba(0,0,0,0.4);
+	color: $white;
+	border: $white solid 2px;
+	font-family: $source;
+	font-weight: 400;
+	font-size: 120%;
+	padding: 8px;
+	text-align: center;
+	max-width: 100%;
+	
+	//positioning 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	//display: inline-block;
+	z-index: 1;
+}
+
+.imageBtn:hover{
+
+	background-color: rgba(0,0,0,1);
+	cursor: pointer;
+}
+
+.applyBtn {
+
+	margin-bottom: 25px;
+	padding-left: 5%;
+	padding-right: 5%;
+	width: 40%;
+}
+
+.btn.purpleDropdown {
+
+	border:none;
+	border-radius: none;
+	background-color: white;
+	font-family: $freight;
+	font-size: 250%;
+	font-weight: 300;
+	color: $purple;
+	width: 100%;
+    text-align: left;
 
 }
 
+ul.dropdown-menu {
+
+	border:none;
+	border-radius: none;
+	background-color: white;
+	font-family: $freight;
+	font-size: 250%;
+	font-weight: 300;
+	color: $purple;
+	width: 100%;
+    text-align: left;
+
+
+}
+
+.caret {
+
+	align: right;
+}
 
 //img grid
 
 .gridImg {
 
+	max-width: 100%;
+	z-index: -1;
 	padding: 2px;
-	float: right;
-	height: 33%;
-	width: 33%;
+	position: relative;
 }
 
+.gridBlock {
 
+	//background-color: yellow;
+	padding:0px;
+	margin:0px;
+	position: relative;
+}
+
+//other images 
+
+.sucImg {
+
+	width: 100%;
+
+}
 
 //links
 	
@@ -297,45 +451,41 @@ a:hover{
 	color: $white;
 }
 
+
+div#successes .successCat {
+
+	display:none;
+
+}
+
+
+
 //media query for tablet size
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
 
-	.gridImg {
-		
-		width: 33%;
-	}
+	// h1 {
 
-	body {
+	// 	font-size: 100%px;
+	// }
 
-		background-color: yellow;
-	}
+	.applyBtn {
 
-	h1 {
-
-		font-size: 50px;
+	margin-bottom: 25px;
+	padding-left: 5%;
+	padding-right: 5%;
+	width: 60%;
+	
 	}
 
 }
 
+
 //media query for mobile size
 
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
 
-	body {
-		background-color: green;
-	}
-
-	.gridImg {
-		
-		width: 50%;
-	}
-
-	.container {
-		padding: 0px;
-		margin: 0px;
-	}
 
 	.containerContent {
 
@@ -346,10 +496,20 @@ a:hover{
 
 		text-align: center;
 		top: 50%;
-		//margin: 5px;
 	}
 
-	#homeBtn {
+	.main {
+
+		min-width: 100%;
+	}
+
+	.topBar {
+
+		min-width: 100%;
+
+	}
+
+	.redBtn {
 
 		min-width: 100%;
 		margin: 0px;
@@ -357,15 +517,30 @@ a:hover{
 		background-color: $red;
 		color: $white;
 		font-weight: 600;
+		display: block;
+		margin-top: 20px;
 
 	}
 
 	.menu {
 
 		left: 0px;
+		min-width: 100%;
+	}
+
+	.tagline {
+
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+
+	#logo {
+
+		width: 50%;
 	}
 
 }
+
 
 
 

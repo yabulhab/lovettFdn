@@ -1,34 +1,59 @@
 body {
-  background-color: blue; }
+  min-width: 100%; }
 
 .main {
   position: relative;
-  top: 170px;
-  z-index: -1; }
+  top: 140px;
+  margin-bottom: 100px;
+  z-index: 0;
+  width: 100%; }
 
 .topBar {
   height: 80px;
   min-width: 100%;
-  background-color: orange;
   z-index: 2;
-  position: fixed;
-  padding-right: 70px; }
+  position: fixed; }
 
 .darkContainer {
   background-color: #F3F3F3;
   margin-top: 50px;
-  min-width: 100%; }
+  width: 100%; }
 
 .containerContent {
-  padding: 50px; }
+  padding: 100px; }
+
+.noPadding {
+  padding-left: 0px !important;
+  padding-right: 0px !important; }
+
+.centered {
+  margin: 0 auto; }
+
+.bottomMargin {
+  margin-bottom: 50px; }
+
+hr {
+  color: #3D1C53;
+  border: none;
+  height: 1px;
+  background-color: #3D1C53; }
+
+a:hover {
+  cursor: pointer; }
+
+button:hover {
+  cursor: pointer; }
+
+#logo {
+  width: 15%;
+  display: inline;
+  margin-top: 15px;
+  float: left; }
 
 .menuTrigger {
   margin-top: 15px;
-  font-family: "freight-display-pro";
-  font-weight: 700;
-  font-style: normal;
-  font-size: 30px;
-  position: 5px; }
+  float: right;
+  position: relative; }
 
 .menuTrigger:hover {
   cursor: pointer; }
@@ -36,15 +61,20 @@ body {
 #menuWord {
   display: inline-block;
   height: 100%;
-  float: left;
-  background-color: purple;
   text-align: center;
-  margin-right: 5px; }
+  font-family: "freight-display-pro";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+  padding-right: 8px; }
+
+#menuWord.open {
+  color: #ffffff;
+  font-weight: 600; }
 
 .burger {
   width: 30px;
   height: 30px;
-  position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -54,9 +84,7 @@ body {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   display: inline-block;
-  float: right;
-  background-color: green;
-  margin-top: 10%; }
+  vertical-align: middle; }
 
 .burger:hover {
   cursor: pointer; }
@@ -88,22 +116,24 @@ body {
   top: 20px; }
 
 #s0.open {
-  top: 20px;
+  top: 10px;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -o-transform: rotate(135deg);
-  transform: rotate(135deg); }
+  transform: rotate(135deg);
+  background-color: #ffffff; }
 
 #s1.open {
   opacity: 0;
-  left: -60px; }
+  right: -60px; }
 
 #s2.open {
-  top: 20px;
+  top: 10px;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
-  transform: rotate(-135deg); }
+  transform: rotate(-135deg);
+  background-color: #ffffff; }
 
 .menu {
   min-height: 100%;
@@ -113,10 +143,13 @@ body {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  z-index: 0;
+  z-index: 1;
   text-align: right;
-  padding: 50px;
-  padding-top: 150px; }
+  padding-top: 150px;
+  width: 360px; }
+
+ul {
+  padding-left: 0px; }
 
 .menuItem {
   text-decoration: none;
@@ -124,13 +157,17 @@ body {
   font-family: "source-sans-pro";
   font-size: 20px;
   font-weight: 300;
+  background-color: #880A04;
+  min-width: 100%;
   padding: 20px;
-  background-color: purple;
-  min-width: 100%; }
+  padding-right: 50px; }
+
+.menuItem:hover {
+  background-color: #6E0A04; }
 
 h1 {
   font-family: "freight-display-pro";
-  font-size: 55px;
+  font-size: 400%;
   font-weight: 400;
   text-align: right;
   margin-top: 0px;
@@ -141,8 +178,19 @@ h2 {
   margin-bottom: 40px;
   font-family: "freight-display-pro";
   font-weight: 300;
-  font-size: 38px;
+  font-size: 250%;
   color: #880A04; }
+
+h3 {
+  font-family: "freight-display-pro";
+  font-size: 250%;
+  font-weight: 300;
+  color: #3D1C53; }
+
+h4 {
+  font-family: "source-sans-pro";
+  font-size: 150%;
+  font-weight: 600; }
 
 p {
   font-family: "source-sans-pro";
@@ -155,25 +203,82 @@ p {
   border-color: #880A04;
   color: #880A04;
   font-family: "source-sans-pro";
-  font-weight: 700;
-  font-size: 30px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-right: 35px;
-  padding-left: 35px;
+  font-weight: 600;
+  font-size: 200%;
   background-color: #ffffff; }
 
 .redBtn:hover {
   cursor: pointer; }
 
 #homeBtn {
-  margin-top: 40px; }
+  margin-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.imageBtn {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  border: #ffffff solid 2px;
+  font-family: "source-sans-pro";
+  font-weight: 400;
+  font-size: 120%;
+  padding: 8px;
+  text-align: center;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; }
+
+.imageBtn:hover {
+  background-color: black;
+  cursor: pointer; }
+
+.applyBtn {
+  margin-bottom: 25px;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 40%; }
+
+.btn.purpleDropdown {
+  border: none;
+  border-radius: none;
+  background-color: white;
+  font-family: "freight-display-pro";
+  font-size: 250%;
+  font-weight: 300;
+  color: #3D1C53;
+  width: 100%;
+  text-align: left; }
+
+ul.dropdown-menu {
+  border: none;
+  border-radius: none;
+  background-color: white;
+  font-family: "freight-display-pro";
+  font-size: 250%;
+  font-weight: 300;
+  color: #3D1C53;
+  width: 100%;
+  text-align: left; }
+
+.caret {
+  align: right; }
 
 .gridImg {
+  max-width: 100%;
+  z-index: -1;
   padding: 2px;
-  float: right;
-  height: 33%;
-  width: 33%; }
+  position: relative; }
+
+.gridBlock {
+  padding: 0px;
+  margin: 0px;
+  position: relative; }
+
+.sucImg {
+  width: 100%; }
 
 a {
   text-decoration: none;
@@ -184,26 +289,16 @@ a:hover {
   cursor: pointer;
   color: #ffffff; }
 
-@media (max-width: 992px) {
-  .gridImg {
-    width: 33%; }
+div#successes .successCat {
+  display: none; }
 
-  body {
-    background-color: yellow; }
-
-  h1 {
-    font-size: 50px; } }
-@media (max-width: 767px) {
-  body {
-    background-color: green; }
-
-  .gridImg {
-    width: 50%; }
-
-  .container {
-    padding: 0px;
-    margin: 0px; }
-
+@media screen and (max-width: 992px) {
+  .applyBtn {
+    margin-bottom: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 60%; } }
+@media screen and (max-width: 767px) {
   .containerContent {
     padding: 10px; }
 
@@ -211,15 +306,31 @@ a:hover {
     text-align: center;
     top: 50%; }
 
-  #homeBtn {
+  .main {
+    min-width: 100%; }
+
+  .topBar {
+    min-width: 100%; }
+
+  .redBtn {
     min-width: 100%;
     margin: 0px;
     padding: 15px;
     background-color: #880A04;
     color: #ffffff;
-    font-weight: 600; }
+    font-weight: 600;
+    display: block;
+    margin-top: 20px; }
 
   .menu {
-    left: 0px; } }
+    left: 0px;
+    min-width: 100%; }
+
+  .tagline {
+    padding-left: 0px !important;
+    padding-right: 0px !important; }
+
+  #logo {
+    width: 50%; } }
 
 /*# sourceMappingURL=style.css.map */

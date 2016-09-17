@@ -1,0 +1,152 @@
+<!doctype HTML>
+<html>
+<head>
+
+		<script src="https://use.typekit.net/odg7zar.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<script src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>	
+		<script src="js/script.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1;">
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+
+<body ng-app="lovettApp">
+		<div ng-include src="'templates/menu.html'"></div>
+		<div id="successes" class="main container containerContent" >
+			<h2>success stories</h2>
+
+				<!--<div ng-include src="'templates/success_dropdown.html'"></div>-->
+
+			<div class="dropdown" id="dropdown">
+				<button class="btn purpleDropdown dropdown-toggle" type="button" data-toggle="dropdown">
+					Successes
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#education" onclick="openCat('education')">Education</a>
+					</li>
+					<li>
+						<a href="#arts" onclick="openCat('arts')">Arts</a>
+					</li>
+					<li>
+						<a href="#aidsSupport" onclick="openCat('aidsSupport')">AIDS Support</a>
+					</li>
+					<li>
+						<a href="#womenFamily" onclick="openCat('womenFamily')">Women & Family</a>
+					</li>
+					<li>
+						<a href="#environment" onclick="openCat('environment')">Environment</a>
+					</li>
+					<li>
+						<a href="#homelessness" onclick="openCat('homelessness')">Homelessness</a>
+					</li>
+				</ul>
+			</div>
+			
+			<hr>
+
+
+			<div class="successCat" id="education">
+				<div class="row">
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<h4>Summit School</h4>
+						<p class="sucPara">Summit School is grateful for an annual grant from the Lovett Foundation that funds our 9th Grade Philanthropy Project. The grant provides an important opportunity for leadership development through the lessons of grant-making. Students gain a valuable experience that most people don’t have until they are well established in their professional lives. They learn about issues and needs in the greater community, the process of evaluating multiple worthy causes and proposals, how to build and reach consensus, and ultimately, how their decision impacts others. The project culminates with a grant to a local nonprofit organization selected by the 9th grade class after a thorough review process.
+							<br>
+							<br>
+						— Jeanne Sayers, Director of Development</p>
+					</div>						
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						
+						<img src="/assets/imgs/summit.jpg" class="sucImg"></img>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="successCat" id="womenFamily">
+				<div class="row">	
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<h4>Women & Family</h4>
+						<p class="sucPara">Turducken pig brisket, meatloaf turkey tri-tip venison tail alcatra shankle cupim cow. Cow ham hock kielbasa shankle, fatback strip steak pig jowl beef ribs salami boudin porchetta sausage. Pancetta prosciutto chuck, tenderloin leberkas pastrami beef ribs ham hock shankle meatball venison shank jowl. Pork loin salami biltong tail corned beef. Beef andouille filet mignon bresaola short loin pastrami chicken. Salami meatloaf short ribs, pancetta kielbasa pork belly chicken fatback shank landjaeger.</p>
+					</div>
+				</div>					
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<img src="http://placekitten.com/200/200" class="sucImg"></img>
+				</div>
+
+			</div>
+
+			<div class="successCat" id="aidsSupport">
+				<div class="row">	
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<h4>AIDS Care Service (Winston-Salem, NC)</h4>
+						<p class="sucPara">The Lovett Foundation’s grants to ACS over the years have helped our organization in many ways. I think many people don’t understand the difference they can make in people’s lives, that it’s the little things like a new mattress or a good meal that accumulate over time into raising the standard of living for our most vulnerable. Again, thank you for helping to make the lives of our residents and staff at Holly Haven Family Care Home and our Horseshoe transitional housing a little better.
+							<br>
+							<br>
+							—Colin Miller, Peer Support and Food Pantry Coordinator
+						</p>
+					</div>					
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<img src="/assets/imgs/acs.jpg" class="sucImg"></img>
+					</div>
+				</div>
+			</div>
+
+			<div class="successCat" id="environment">
+				<div class="row">					
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<h4>Environment</h4>
+						<p class="sucPara">Turducken pig brisket, meatloaf turkey tri-tip venison tail alcatra shankle cupim cow. Cow ham hock kielbasa shankle, fatback strip steak pig jowl beef ribs salami boudin porchetta sausage. Pancetta prosciutto chuck, tenderloin leberkas pastrami beef ribs ham hock shankle meatball venison shank jowl. Pork loin salami biltong tail corned beef. Beef andouille filet mignon bresaola short loin pastrami chicken. Salami meatloaf short ribs, pancetta kielbasa pork belly chicken fatback shank landjaeger.</p>
+					</div>	
+					<div class="col-md-6 col-sm-12 col-xs-12">
+								<img src="http://placekitten.com/200/200" class="sucImg"></img>
+					</div>
+				</div>
+			</div>
+
+			<div class="successCat" id="arts">
+				<div class="row">	
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<h4>Bookmarks (Winston-Salem, NC)</h4>
+						<p class="sucPara">The Lovett Foundation has been a game changer for Bookmarks, a literary arts nonprofit in Winston-Salem, NC. With their grant funding, we opened an office space and finally have a visible spot for our organization instead of working out of coffee shops and my basement. We also began to sell books at our Festival and at our author and reading events thanks to a grant from the Lovett Foundation. Selling books year-round has helped us to become less reliant on sponsorships and grants. We now are taking the first steps to creating an independent bookstore in Winston-Salem thanks to their support!
+							<br>
+							<br>
+							—Ginger Hendricks, Executive Director</p>
+					</div>					
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<img src="/assets/imgs/bookmarks.jpg" class="sucImg"></img>
+					</div>
+				</div>
+			</div>
+
+			<div class="successCat" id="homelessness">
+				<div class="row">	
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<h4>Homelessness</h4>
+						<p class="sucPara">Turducken pig brisket, meatloaf turkey tri-tip venison tail alcatra shankle cupim cow. Cow ham hock kielbasa shankle, fatback strip steak pig jowl beef ribs salami boudin porchetta sausage. Pancetta prosciutto chuck, tenderloin leberkas pastrami beef ribs ham hock shankle meatball venison shank jowl. Pork loin salami biltong tail corned beef. Beef andouille filet mignon bresaola short loin pastrami chicken. Salami meatloaf short ribs, pancetta kielbasa pork belly chicken fatback shank landjaeger.</p>
+					</div>					
+					<div class="col-md-6 col-sm-12 col-xs-12">
+						<img src="http://placekitten.com/200/200" class="sucImg"></img>
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+		</div><!--main container-->
+
+</body>
+</html>
