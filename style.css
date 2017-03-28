@@ -3,6 +3,12 @@ body {
 
 .main {
   position: relative;
+  margin-bottom: 100px;
+  z-index: 0;
+  width: 100%; }
+
+.main#indexBod {
+  position: relative;
   top: 140px;
   margin-bottom: 100px;
   z-index: 0;
@@ -44,7 +50,10 @@ a:hover {
 button:hover {
   cursor: pointer; }
 
-#logo {
+.showing {
+  display: inline; }
+
+.logo {
   width: 15%;
   display: inline;
   margin-top: 15px;
@@ -148,6 +157,9 @@ button:hover {
   padding-top: 150px;
   width: 360px; }
 
+.menu.container {
+  position: fixed !important; }
+
 ul {
   padding-left: 0px; }
 
@@ -171,7 +183,8 @@ h1 {
   font-weight: 400;
   text-align: right;
   margin-top: 0px;
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+  z-index: 1; }
 
 h2 {
   text-align: center;
@@ -196,6 +209,13 @@ p {
   font-family: "source-sans-pro";
   font-weight: 400;
   font-size: 18px; }
+
+#scrollDown {
+  z-index: 2;
+  text-align: center;
+  font-family: "freight-display-pro";
+  font-size: 1.5em;
+  padding-top: 20px; }
 
 .redBtn {
   display: block;
@@ -280,6 +300,9 @@ ul.dropdown-menu {
 .sucImg {
   width: 100%; }
 
+#indexImg {
+  display: none; }
+
 a {
   text-decoration: none;
   color: #ffffff; }
@@ -289,8 +312,15 @@ a:hover {
   cursor: pointer;
   color: #ffffff; }
 
-div#successes .successCat {
-  display: none; }
+h3:before {
+  display: block;
+  content: " ";
+  margin-top: -120px;
+  height: 120px;
+  visibility: hidden; }
+
+.successCat {
+  padding-bottom: 100px; }
 
 @media screen and (max-width: 992px) {
   .applyBtn {
@@ -304,13 +334,19 @@ div#successes .successCat {
 
   h1 {
     text-align: center;
-    top: 50%; }
+    top: 50%;
+    margin-top: 80px; }
 
   .main {
-    min-width: 100%; }
+    min-width: 100%;
+    top: 140px; }
+
+  .main#indexBod {
+    top: 0px; }
 
   .topBar {
-    min-width: 100%; }
+    min-width: 100%;
+    position: absolute; }
 
   .redBtn {
     min-width: 100%;
@@ -324,13 +360,32 @@ div#successes .successCat {
 
   .menu {
     left: 0px;
-    min-width: 100%; }
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute; }
 
   .tagline {
     padding-left: 0px !important;
+    padding-right: 0px !important;
+    display: none; }
+
+  .noPad {
+    padding-left: 0px !important;
     padding-right: 0px !important; }
 
-  #logo {
-    width: 50%; } }
+  .logo {
+    width: 50%; }
+
+  #indexImg {
+    display: block;
+    z-index: -1;
+    width: 100%;
+    position: absolute; }
+
+  #homeBtn {
+    margin-top: 60%; }
+
+  #scrollDown {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

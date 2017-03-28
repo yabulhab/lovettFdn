@@ -2,49 +2,51 @@
 <div ng-controller="MenuCtrl">	
 
 	<!-- top navigation (logo + menuTrigger) -->
-	
-	<div class="topBar container">
+	<div id="whiteBar">
+		<div class="topBar container">
+			
 
-		<!-- LOGO -->
-		<div>
-			<img id="logo" src="./assets/imgs/lovettLogo.png">
-		</div>
-	
-		<!-- menu trigger section-->
+			<!-- LOGO -->
+			<a href="index.html"><div>
+				<img class="logo" ng-hide="visibleMenu && mobile" src="./assets/imgs/lovettLogo.png">
+				<img class="logo" ng-show="visibleMenu && mobile" src="./assets/imgs/lovettLogoW.png">
+			</div></a>
+		
+			<!-- menu trigger section-->
 
-		<div ng-click="toggleFunc()">
-			<div class="menuTrigger pull-right">
-				<div id="menuWord" >menu</div>
-				<div class="burger" id="burg">
-					<span id="s0" ></span>
-					<span id="s1" ></span>
-					<span id="s2" ></span>
+			<div ng-click="toggleFunc()">
+				<div class="menuTrigger pull-right">
+					<div id="menuWord" >menu</div>
+					<div class="burger" id="burg">
+						<span id="s0" ></span>
+						<span id="s1" ></span>
+						<span id="s2" ></span>
+					</div>
 				</div>
 			</div>
+
 		</div>
+		
+		<!-- menu -->
+		<div ng-show="visibleMenu"  class="menu container">
+	<!-- 		<div class="menuHead"></div> -->
+			<ul>
+				<a href="index.html" ng-click="toggleFunc()">
+					<li class="menuItem">about</li> 
+				</a>
+				<a href="successes.html" ng-click="toggleFunc()">
+					<li class="menuItem">success stories</li>
+				</a>
+				<a href="elementaryDramaFund.html" ng-click="toggleFunc()">
+					<li class="menuItem">elementary drama fund</li>
+				</a>
+				<a href="apply.html" ng-click="toggleFunc()">
+					<li class="menuItem">apply</li>
+				</a>
+			</ul>
+		</div>	
 
 	</div>
-	
-	<!-- menu -->
-	<div ng-show="visibleMenu"  class="menu container">
-<!-- 		<div class="menuHead"></div> -->
-		<ul>
-			<a href="index.html">
-				<li class="menuItem">about</li> 
-			</a>
-			<a href="successes.html">
-				<li class="menuItem">success stories</li>
-			</a>
-			<a href="elementaryDramaFund.html">
-				<li class="menuItem">elementary drama fund</li>
-			</a>
-			<a href="apply.html">
-				<li class="menuItem">apply</li>
-			</a>
-		</ul>
-	</div>	
-
-
 </div>
 
 

@@ -23,12 +23,23 @@ body {
 .main {
 
 	position: relative;
+	margin-bottom: 100px;
+	z-index: 0;
+	//background-color: orange;
+	width: 100%;
+}
+
+.main#indexBod {
+
+	position: relative;
 	top:140px;
 	margin-bottom: 100px;
 	z-index: 0;
 	//background-color: orange;
 	width: 100%;
 }
+
+
 
 .topBar {
 
@@ -38,6 +49,8 @@ body {
 	z-index: 2;
 	position: fixed;
 }
+
+
 
 .darkContainer {
 
@@ -84,9 +97,14 @@ button:hover {
 	cursor:pointer;
 }
 
+.showing {
+
+	display: inline;
+}
+
 //logo
 
-#logo {
+.logo {
 
 	width:15%;
 	display:inline;
@@ -127,7 +145,7 @@ button:hover {
 
 #menuWord.open {
 
-	color: $white;
+	color: black;
 	font-weight: 600; 
 
 }
@@ -197,7 +215,7 @@ button:hover {
   -moz-transform: rotate(135deg);
   -o-transform: rotate(135deg);
   transform: rotate(135deg);
-  background-color: $white;
+  background-color: black;
 }
 
 #s1.open {
@@ -211,7 +229,7 @@ button:hover {
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
-  background-color: $white;
+  background-color: black;
 }
 
 
@@ -231,6 +249,11 @@ button:hover {
 	padding-top: 150px;		
 	width: 360px;
 
+}
+
+.menu.container {
+
+	position: fixed !important;
 }
 
 ul {
@@ -271,6 +294,7 @@ h1 {
 	text-align: right;
 	margin-top: 0px;
 	margin-bottom: 8px;
+	z-index:1;
 
 }
 
@@ -310,6 +334,17 @@ p {
 	font-family: $source;
 	font-weight: 400;
 	font-size: 18px;
+}
+
+#scrollDown {
+
+	z-index: 2;
+	text-align: center;
+	font-family: $freight;
+	font-size: 1.5em;
+	padding-top: 20px;
+
+	//display: inline;
 }
 
 
@@ -437,6 +472,12 @@ ul.dropdown-menu {
 
 }
 
+#indexImg {
+
+	display:none;
+}
+
+
 //links
 	
 a {
@@ -451,14 +492,22 @@ a:hover{
 	color: $white;
 }
 
+// Chris Coyier https://css-tricks.com/hash-tag-links-padding/
 
-div#successes .successCat {
-
-	display:none;
-
+h3:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -120px; 
+  height: 120px; 
+  visibility: hidden; 
 }
 
+//
 
+.successCat {
+
+	padding-bottom: 100px;
+}
 
 //media query for tablet size
 
@@ -478,6 +527,7 @@ div#successes .successCat {
 	
 	}
 
+
 }
 
 
@@ -496,16 +546,25 @@ div#successes .successCat {
 
 		text-align: center;
 		top: 50%;
+		margin-top: 80px;
 	}
 
 	.main {
 
 		min-width: 100%;
+		top:140px;
+	}
+
+	.main#indexBod {
+		top:0px;
 	}
 
 	.topBar {
 
 		min-width: 100%;
+		position: absolute;
+		//background-color:$white
+
 
 	}
 
@@ -526,19 +585,65 @@ div#successes .successCat {
 
 		left: 0px;
 		min-width: 100%;
+		min-height: 100%;
+		position: absolute;
+		//background-color: $white;
 	}
 
 	.tagline {
 
 		padding-left: 0px !important;
 		padding-right: 0px !important;
+		display:none;
+		//position: absolute;
 	}
 
-	#logo {
+	.noPad {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+
+	.logo {
 
 		width: 50%;
 	}
 
+
+	#indexImg {
+
+		display:block;
+		z-index: -1;
+		width: 100%;
+		position: absolute;
+	}
+
+	#homeBtn {
+		margin-top: 60%;
+	}
+
+	// #menuWord {
+
+	// 	color: $white;
+	// }
+
+	// #s0 {
+ //  		top: 0px;
+ //  		background-color: $white;
+	// }
+
+	// #s1 {
+ //  		top: 10px;
+ //  		background-color: $white;
+	// }
+
+	// #s2 {
+ //  		top: 20px;
+ //  		background-color: $white;
+	// }
+
+	#scrollDown {
+		display: none;
+	}
 }
 
 

@@ -19,10 +19,13 @@
 	<div ng-include src="'templates/menu.html'"></div>
 
 	<!-- main content -->
-			<div class="main container">
-				<div class="row">
-					<div class="tagline col-sm-4 col-xs-12">
-						<h1>Your project,<br>funded.</h1>
+			<div class="main container" id="indexBod">
+				<div class="row indexImgAnc">
+					<img src="./assets/imgs/iStock_84928371_SMALL.jpg" id="indexImg">
+					<div class="col-sm-4 col-xs-12 noPad">
+						<div class="tagline">
+							<h1>Small grants for big change.</h1>
+						</div>
 						<a href="./apply.html">
 							<button class="redBtn pull-right" id="homeBtn">
 								APPLY
@@ -33,37 +36,37 @@
 	
 					<div class="noPadding col-sm-7 col-xs-12">
 						<div class="gridBlock col-sm-4 col-xs-6">
-							<a ng-href="successes.html#/education">
+							<a href="successes.html#/#education" onclick="addMargin()">
 								<img src ="assets/imgs/iStock_78562777.jpg" class="gridImg">
 								<div class="imageBtn">EDUCATION</div>
 							</a>
 						</div>
 						<div class="gridBlock col-sm-4 col-xs-6 ">
-							<a href="#">
+							<a href="successes.html#/#arts">
 								<img src ="assets/imgs/iStock_96122167.jpg"class="gridImg">
 								<div class="imageBtn">THE ARTS</div>
 							</a>
 						</div>
 						<div class="gridBlock col-sm-4 col-xs-6">
-							<a href="#">
+							<a href="successes.html">
 								<img src ="assets/imgs/iStock_68878869.jpg" class="gridImg">
 								<div class="imageBtn">WOMEN/FAMILY</div>
 							</a>
 						</div>
 						<div class="gridBlock col-sm-4 col-xs-6">
-							<a href="#">
+							<a href="successes.html">
 								<img src ="assets/imgs/iStock_76966743.jpg" class="gridImg">
 								<div class="imageBtn">HOMELESSNESS</div>
 							</a>
 						</div>
 						<div class="gridBlock col-sm-4 col-xs-6">
-							<a href="#">
+							<a href="successes.html#/#aidsSupport">
 								<img src ="assets/imgs/iStock_74255107.jpg" class="gridImg">
 								<div class="imageBtn">AIDS SUPPORT</div>
 							</a>
 						</div>
 						<div class="gridBlock col-sm-4 col-xs-6">
-							<a href="#">
+							<a href="successes.html">
 								<img src ="assets/imgs/iStock_91205743.jpg" class="gridImg">
 								<div class="imageBtn">ENVIRONMENT</div>
 							</a>
@@ -71,20 +74,22 @@
 					</div>
 					<div class="col-sm-1 col-xs-12"></div>
 				</div> <!--row-->
-	
+				<div id="scrollDown" >
+					<span class="glyphicon glyphicon-chevron-down"></span>
+				</div>
 				<div  id="about" class="containerContent darkContainer">
 					<h2>mission</h2>
 					<p>
-						We believe that our future depends on the ability of the coming generations to think rationally and independently, to provide society with clean homes to live in and clean land to live in harmony with, to contribute to and appreciate our nation's evolving cultural heritage, and to dispel the notion that women, children, homosexuals, and other groups are somehow second class citizens.
+						We believe that our future depends on the ability of the coming generations to think rationally and independently, to provide society with clean homes to live in and clean land to live in harmony with, to contribute to and appreciate our nation's evolving cultural heritage, and to embrace the truth that we are all—whether women, children, LGBTQ, or others—deserving of equal treatment.
 					</p>
 				</div>
 	
 				<div class="containerContent">
 					<h2>history</h2>
 					<p>
-					The Lovett Foundation is a private foundation founded in 1992 by Charlie Lovett. In the early meetings of the board of directors, the foundation identified six areas in which it would make grants: education (especially primary through secondary), the arts, the environment, homelessness, AIDS support, and women's and family issues.
-					<br><br>
-					In reviewing and considering grant applications for over twentyyears, the board has gradually developed a philosophy of giving - a philosophy which continues to develop. Grants are made in these six areas, with preference given to those organizations for whom a grant of $2000–$3000 will make a significant difference. The average grant is $2700. The board looks for applicants that have a strong volunteer base, a large number of consituents, and a significant impact on their communities. We look for places where our grant money can help an organization get established or reach beyond its previous parameters. We are often attracted to non-glamorous grants - we have purchased office machines, a refrigerator, and a truckload of processed rubber in the past. Most grants are made in North Carolina.</p>
+					The Lovett Foundation is a private foundation founded in 1992 by Charlie Lovett. In the early meetings of the board of directors, the foundation identified six areas in which it would make grants: education (especially primary through secondary), the arts, the environment, homelessness, AIDS support, and women's and family issues. We continue to fund in these areas, with the addition of LGBTQ issues.
+					<br>  
+					In reviewing and considering grant applications for twenty-five years, the board has gradually developed a philosophy of giving—a philosophy which continues to develop. Grants are made in these areas, with preference given to those organizations for whom a grant of $2000–$3000 will make a significant difference. The average grant is $2700. The board looks for applicants that have a strong volunteer base, a large number of constituents, and a significant impact on their communities. We look for places where our grant money can help an organization get established or reach beyond its previous parameters. We are often attracted to non-glamorous grants—we have purchased office machines, a refrigerator, and a truckload of processed rubber in the past. Most grants are made in North Carolina.</p>
 				</div>
 			</div> <!--main container end-->
 	
