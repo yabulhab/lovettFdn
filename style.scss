@@ -1,100 +1,153 @@
-
-// variables 
-
 //colors
 $red: #880A04;
 $deepRed: #6E0A04;
 $white: #ffffff;
-$grey: #F3F3F3;
+$grey: #e0e0e0;
 $purple:#3D1C53;
 
 //fonts
 $freight: "freight-display-pro";
 $source: "source-sans-pro";
 
-//layout
+//global
+
+html {
+	position: relative;
+}
+	
+a {
+	text-decoration: none;
+	color: $white;
+}
+
+a:hover{
+	text-decoration: none;
+	cursor:pointer;
+	color: $white;
+}
 
 body {
-
-	//background-color: blue;
-	min-width: 100%;
-}
-
-.main {
-
-	position: relative;
-	margin-bottom: 100px;
-	z-index: 0;
-	//background-color: orange;
-	width: 100%;
-}
-
-.main#indexBod {
-
-	position: relative;
-	top:140px;
-	margin-bottom: 100px;
-	z-index: 0;
-	//background-color: orange;
-	width: 100%;
-}
-
-
-
-.topBar {
-
-	height: 80px;
-	min-width: 100%;
-	//background-color: $white;
-	z-index: 2;
-	position: fixed;
-}
-
-
-
-.darkContainer {
-
-	background-color: $grey;
-	margin-top: 50px;
-	width: 100%;
-
-}
-
-.containerContent {
-
-	padding: 100px;
-}
-
-.noPadding {
-
-	padding-left: 0px !important;
-	padding-right: 0px !important;
-}
-
-.centered {
-
-	margin: 0 auto;
-}
-
-.bottomMargin {
-
-	margin-bottom: 50px;
+	// position: relative;
 }
 
 hr {
-
-	color:$purple;
+	color: $purple;
 	border: none;
 	height: 1px;
 	background-color: $purple;
 }
 
-a:hover {
+button:hover {
 	cursor: pointer;
 }
 
-button:hover {
-	cursor:pointer;
+h1 {
+	font-family: $freight;
+	font-size: 400%;
+	font-weight: 400;
+	text-align: right;
+	margin-top: 0px;
+	margin-bottom: 8px;
+	z-index:1;
+}
+
+
+h2 {
+	text-align: center;
+	margin-bottom: 40px;
+	font-family: $freight;
+	font-weight: 300;
+	font-size: 250%;
+	color: $red;
+
+}
+
+h3 {
+	font-family: $freight;
+	font-size: 250%;
+	font-weight: 300;
+	color: $purple;
+	padding-left: 15px;
+}
+
+
+h4 {
+	font-family: $source;
+	font-size: 150%;
+	font-weight: 600;
+}
+
+p {
+	font-family: $source;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+ul.dropdown-menu {
+	border:none;
+	border-radius: none;
+	background-color: white;
+	font-family: $freight;
+	font-size: 250%;
+	font-weight: 300;
+	color: $purple;
+	width: 100%;
+    text-align: left;
+}
+
+//layout
+
+.main {
+	position: relative;
+	margin-bottom: 100px;
+	z-index: -1;
+	transition: margin-right 0.5s;
+}
+
+.main#index {
+	position: relative;
+	margin-top: 60px;
+	margin-bottom: 100px;
+	z-index: 0;
+}
+
+.row {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+#bodyOverlay {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0, 0.3);
+	z-index:1;
+	position:absolute;
+	top:0;
+	left:0;
+	display: none;
+}
+
+#about-mission {
+	margin-top: 50px;
+	background-color: $grey;
+}
+
+.containerContent {
+	padding: 25px 100px 25px 125px;
+}
+
+.noPadding {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+
+.bottomMargin {
+	margin-bottom: 50px;
+}
+
+.centered {
+	margin: 0 auto;
 }
 
 .showing {
@@ -102,56 +155,81 @@ button:hover {
 	display: inline;
 }
 
-//logo
-
 .logo {
-
-	width:15%;
-	display:inline;
+	width: 30%;
 	margin-top: 15px;
-	float: left;
+	padding-left: 40px;
+	z-index: 3;
+	display: inline-block;
+	order:1;
 }
 
+.sucImg {
+	width: 100%;
+}
 
+#tagline {
+	font-size: 1.3vw;
+}
 
-//menuTriggers
+//img grid
 
-.menuTrigger {
-
-	margin-top: 15px;
-	//background-color: yellow;
-	float: right;
+.gridImg {
+	max-width: 100%;
+	z-index: -1;
+	padding: 2px;
 	position: relative;
 }
 
-.menuTrigger:hover{
+.gridBlock {
+	padding:0px;
+	position: relative;
+	min-height: 100%;
+}
 
+
+//Header & Menu wrap
+
+#headerAndMenu {
+	display: inline-flex;
+	align-content:center;
+}
+
+//menuTrigger
+
+.menuTrigger {
+	margin-top: 15px;
+	right:0px;
+	position: fixed;
+	z-index: 4;
+	padding-right: 40px;
+	order:2; 
+}
+
+.menuTrigger:hover{
 	cursor: pointer;
 }
 
 #menuWord {
-
 	display: inline-block;	
 	height: 100%;
-	//background-color: purple;
 	text-align: center;	
 	font-family: $freight;
 	font-weight: 700; 
 	font-style: normal;
 	font-size: 30px;
 	padding-right: 8px;
-
+	opacity: 1;
 }
 
-#menuWord.open {
-
+#menuWord .open {
 	color: black;
 	font-weight: 600; 
-
 }
 
-.burger {
+	//hamburger
 
+.burger {
 	width: 30px;
 	height: 30px;
 	//margin: 50px auto;
@@ -166,19 +244,14 @@ button:hover {
 	display:inline-block;
 	//background-color: green;
 	vertical-align: middle;
-
 }
 
 .burger:hover {
-
 	cursor: pointer;
-
 }
 
 
 .burger span {
-
-	//z-index: auto;
 	display: block;
 	position: absolute;
 	height: 4px;
@@ -186,10 +259,10 @@ button:hover {
 	background: black;
 	opacity: 1;
 	left: 0;
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-	transform: rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-o-transform:rotate(0deg);
+	transform:rotate(0deg);
 	-webkit-transition: .25s ease-in-out;
 	-moz-transition: .25s ease-in-out;
 	-o-transition: .25s ease-in-out;
@@ -215,7 +288,7 @@ button:hover {
   -moz-transform: rotate(135deg);
   -o-transform: rotate(135deg);
   transform: rotate(135deg);
-  background-color: black;
+  background-color: $white;
 }
 
 #s1.open {
@@ -229,129 +302,61 @@ button:hover {
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
-  background-color: black;
+  background-color: $white;
 }
 
 
-//actual menu
+//menu body
 
 .menu {
-
-	min-height: 100%;
+	height: 100%;	
+	width: 0px;
+	position: fixed;
+	z-index: 3;
 	background-color: $red;
 	color: $white;
-	position: fixed;
+	// overflow-x: hidden;
 	top: 0px;
 	right: 0px;
-	bottom: 0px;
-	z-index: 1;
+	transition: 0.2s;
 	text-align: right;
-	padding-top: 150px;		
-	width: 360px;
-
-}
-
-.menu.container {
-
-	position: fixed !important;
-}
-
-ul {
-
-	padding-left: 0px;
+	box-shadow: -3px 0px 10px #000000;
 }
 
 
-//menuItems
-
-.menuItem {
-
-	text-decoration:none;
-	list-style-type:none;
+.menu a {
+	text-decoration: none;
 	font-family: $source;
 	font-size: 20px;
 	font-weight: 300;
 	background-color: $red;
-	min-width: 100%;
+	// width: 100%;
+	display: block;
 	padding: 20px;
 	padding-right: 50px;
-
+	transition: 0s;
 }
 
-.menuItem:hover {
-
+.menu a:hover {
 	background-color: $deepRed;
 }
 
-
-//headings
-
-h1 {
-
-	font-family: $freight;
-	font-size: 400%;
-	font-weight: 400;
-	text-align: right;
-	margin-top: 0px;
-	margin-bottom: 8px;
-	z-index:1;
-
-}
-
-
-h2 {
-
-	text-align: center;
-	//margin-top: 50px;
-	margin-bottom: 40px;
-	font-family: $freight;
-	font-weight: 300;
-	font-size: 250%;
-	color: $red;
-
-}
-
-h3 {
-
-	font-family: $freight;
-	font-size: 250%;
-	font-weight: 300;
-	color: $purple;
-}
-
-
-h4 {
-
-	font-family: $source;
-	font-size: 150%;
-	font-weight: 600;
-}
-
-//paragraph styles
-
-p {
-
-	font-family: $source;
-	font-weight: 400;
-	font-size: 18px;
+#menuLinksGroup {
+	padding-top: 150px;		
 }
 
 #scrollDown {
-
 	z-index: 2;
 	text-align: center;
 	font-family: $freight;
 	font-size: 1.5em;
 	padding-top: 20px;
-
-	//display: inline;
 }
 
 
 //buttons
 
 .redBtn {
-
 	display:block;
 	border: 3px solid;
 	border-color: $red;
@@ -360,25 +365,24 @@ p {
 	font-weight: 600;
 	font-size: 200%;
 	background-color: $white;
-
+	z-index: 1;
 }
 
 .redBtn:hover {
-
-	cursor: pointer;	
-
+	cursor: pointer;
+	background-color:$red;
+	color:$white;
 }
 
-
 #homeBtn {
-
 	margin-top: 40px;
 	padding-left: 20px;
 	padding-right: 20px;
+	float: right;
+
 }
 
 .imageBtn {
-
 	background-color: rgba(0,0,0,0.4);
 	color: $white;
 	border: $white solid 2px;
@@ -388,32 +392,36 @@ p {
 	padding: 8px;
 	text-align: center;
 	max-width: 100%;
-	
-	//positioning 
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	//display: inline-block;
 	z-index: 1;
 }
 
 .imageBtn:hover{
-
 	background-color: rgba(0,0,0,1);
 	cursor: pointer;
 }
 
 .applyBtn {
-
+	display:block;
+	border: 3px solid;
+	border-color: $red;
+	color: $red;
+	font-family: $source;
+	font-weight: 600;
+	font-size: 200%;
+	background-color: $white;
+	z-index: 1;
 	margin-bottom: 25px;
 	padding-left: 5%;
 	padding-right: 5%;
-	width: 40%;
+	width: 60%;
 }
+
 
 .btn.purpleDropdown {
-
 	border:none;
 	border-radius: none;
 	background-color: white;
@@ -423,74 +431,12 @@ p {
 	color: $purple;
 	width: 100%;
     text-align: left;
-
-}
-
-ul.dropdown-menu {
-
-	border:none;
-	border-radius: none;
-	background-color: white;
-	font-family: $freight;
-	font-size: 250%;
-	font-weight: 300;
-	color: $purple;
-	width: 100%;
-    text-align: left;
-
-
 }
 
 .caret {
-
 	align: right;
 }
 
-//img grid
-
-.gridImg {
-
-	max-width: 100%;
-	z-index: -1;
-	padding: 2px;
-	position: relative;
-}
-
-.gridBlock {
-
-	//background-color: yellow;
-	padding:0px;
-	margin:0px;
-	position: relative;
-}
-
-//other images 
-
-.sucImg {
-
-	width: 100%;
-
-}
-
-#indexImg {
-
-	display:none;
-}
-
-
-//links
-	
-a {
-	text-decoration: none;
-	color:$white;
-
-}
-
-a:hover{
-	text-decoration: none;
-	cursor: pointer;
-	color: $white;
-}
 
 // Chris Coyier https://css-tricks.com/hash-tag-links-padding/
 
@@ -505,141 +451,71 @@ h3:before {
 //
 
 .successCat {
-
 	padding-bottom: 100px;
 }
 
+
 //media query for tablet size
-
 @media screen and (max-width: 992px) {
-
-	// h1 {
-
-	// 	font-size: 100%px;
-	// }
-
 	.applyBtn {
-
-	margin-bottom: 25px;
-	padding-left: 5%;
-	padding-right: 5%;
-	width: 60%;
-	
+		margin-bottom: 25px;
+		padding-left: 5%;
+		padding-right: 5%;
+		width: 60%;
 	}
-
 
 }
 
 
 //media query for mobile size
-
-
 @media screen and (max-width: 767px) {
-
-
 	.containerContent {
-
-		padding: 10px;
+		padding: 30px;
 	}
 
-	h1{
-
+	h1 {
 		text-align: center;
-		top: 50%;
-		margin-top: 80px;
 	}
 
-	.main {
-
-		min-width: 100%;
-		top:140px;
+	#tagline {
+		font-size: 3vw;
 	}
 
-	.main#indexBod {
-		top:0px;
-	}
-
-	.topBar {
-
-		min-width: 100%;
-		position: absolute;
-		//background-color:$white
-
-
+	#homeBtn {
+		margin-top: 10px;
+		margin-bottom: 40px;
+		padding-left: 20px;
+		padding-right: 20px;
+		float:none;
 	}
 
 	.redBtn {
-
-		min-width: 100%;
-		margin: 0px;
+		width: 200px;
+		margin: 0 auto;
 		padding: 15px;
 		background-color: $red;
 		color: $white;
 		font-weight: 600;
 		display: block;
-		margin-top: 20px;
-
+		float: none;
 	}
 
-	.menu {
-
-		left: 0px;
-		min-width: 100%;
-		min-height: 100%;
-		position: absolute;
-		//background-color: $white;
+	.applyBtn {
+		margin-bottom: 25px;
+		padding-left: 5%;
+		padding-right: 5%;
+		width: 60%;
+		font-size: 1.3em;
 	}
 
-	.tagline {
-
-		padding-left: 0px !important;
-		padding-right: 0px !important;
-		display:none;
-		//position: absolute;
+	#tagline {
+		padding: 30px;
 	}
 
 	.noPad {
 		padding-left: 0px !important;
 		padding-right: 0px !important;
 	}
-
-	.logo {
-
-		width: 50%;
-	}
-
-
-	#indexImg {
-
-		display:block;
-		z-index: -1;
-		width: 100%;
-		position: absolute;
-	}
-
-	#homeBtn {
-		margin-top: 60%;
-	}
-
-	// #menuWord {
-
-	// 	color: $white;
-	// }
-
-	// #s0 {
- //  		top: 0px;
- //  		background-color: $white;
-	// }
-
-	// #s1 {
- //  		top: 10px;
- //  		background-color: $white;
-	// }
-
-	// #s2 {
- //  		top: 20px;
- //  		background-color: $white;
-	// }
 
 	#scrollDown {
 		display: none;

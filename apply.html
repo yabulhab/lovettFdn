@@ -1,6 +1,6 @@
 <!doctype HTML>
 <html>
-	<head>
+<head>
 
 	<script src="https://use.typekit.net/odg7zar.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -13,23 +13,23 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css" type="text/css">
 
-	</head>
+</head>
 
-	<body ng-app="lovettApp">
-		<div ng-include src="'templates/menu.html'"></div>
-		<div class="main container">
-			<div class="containerContent">
-				<h2>apply for a grant</h2>
-				<p class="bottomMargin">
-					The Lovett Foundation accepts grant applications from American non-profit organizations classified by the IRS as 501(c)(3). Grants are made for specific projects only and are not made to umbrella organizations. Applications are accepted from May 1 through July 31 each year. The application form is available on line at the link below; it should be printed off and sent in by post. PLEASE check after April 1 for updates to the application. Only application forms from the current year will be accepted. Please follow ALL directions in filling out the form. Our board generally meets in September and grants are usually made by the end of October. Click on the links below for application forms.
-				</p>
-				<a href="assets/lovettfoundationgrant.pdf" target="_blank">
-					<button class="redBtn applyBtn centered">regular application</button>
-				</a>
-				<a href="assets/elementarydramafund.pdf" target="_blank">
-					<button class="redBtn applyBtn centered">elementary school drama fund</button>
-				</a>
+<body ng-app="lovettApp" ngCloak>
+		<div ng-include src="'templates/header.html'"></div>
+			<div class="main">
+				<div class="containerContent">
+					<h2>apply for a grant</h2>
+					<p class="bottomMargin">
+						The Lovett Foundation accepts grant applications from American non-profit organizations classified by the IRS as 501(c)(3). Grants are made for specific projects only and are not made to umbrella organizations. Applications are accepted from May 1 through July 31 each year. The application form is available on line at the link below; it should be printed off and sent in by post. PLEASE check after April 1 for updates to the application. Only application forms from the current year will be accepted. Please follow ALL directions in filling out the form. Our board generally meets in September and grants are usually made by the end of October. Click on the links below for application forms.
+					</p>
+					<a href="assets/lovettfoundationgrant.pdf" target="_blank">
+						<button class="applyBtn centered">regular application</button>
+					</a>
+					<a href="assets/elementarydramafund.pdf" target="_blank">
+						<button class="applyBtn centered">elementary school drama fund application</button>
+					</a>
+				</div>
 			</div>
-		</div>
-	</body>
+</body>
 </html>

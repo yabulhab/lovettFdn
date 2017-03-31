@@ -1,52 +1,31 @@
 
-<div ng-controller="MenuCtrl">	
-
-	<!-- top navigation (logo + menuTrigger) -->
-	<div id="whiteBar">
-		<div class="topBar container">
-			
-
-			<!-- LOGO -->
-			<a href="index.html"><div>
-				<img class="logo" ng-hide="visibleMenu && mobile" src="./assets/imgs/lovettLogo.png">
-				<img class="logo" ng-show="visibleMenu && mobile" src="./assets/imgs/lovettLogoW.png">
-			</div></a>
-		
-			<!-- menu trigger section-->
-
-			<div ng-click="toggleFunc()">
-				<div class="menuTrigger pull-right">
-					<div id="menuWord" >menu</div>
-					<div class="burger" id="burg">
-						<span id="s0" ></span>
-						<span id="s1" ></span>
-						<span id="s2" ></span>
-					</div>
+<div ng-controller="MenuCtrl">
+	<div id="theWholeMenu">
+		<span ng-click="triggerClick()">
+			<div class="menuTrigger pull-right">
+				<div id="menuWord" >
+					menu
 				</div>
+					<div class="burger" id="burg">
+					<span id="s0" ></span>
+					<span id="s1" ></span>
+					<span id="s2" ></span>
+					</div>
 			</div>
-
-		</div>
+		</span>	
 		
 		<!-- menu -->
-		<div ng-show="visibleMenu"  class="menu container">
-	<!-- 		<div class="menuHead"></div> -->
-			<ul>
-				<a href="index.html" ng-click="toggleFunc()">
-					<li class="menuItem">about</li> 
-				</a>
-				<a href="successes.html" ng-click="toggleFunc()">
-					<li class="menuItem">success stories</li>
-				</a>
-				<a href="elementaryDramaFund.html" ng-click="toggleFunc()">
-					<li class="menuItem">elementary drama fund</li>
-				</a>
-				<a href="apply.html" ng-click="toggleFunc()">
-					<li class="menuItem">apply</li>
-				</a>
-			</ul>
-		</div>	
 
+		<div class="menu" id="myMenu">
+			<div id="menuLinksGroup">
+				<a onclick=scrollDown(); href="index.html">about</a>
+				<a href="successes.html">success stories</a>
+				<a href="elementaryDramaFund.html">elementary drama fund</a>
+				<a href="apply.html">apply</a>
+			</div>
+		</div>
 	</div>
+	<div id="bodyOverlay"></div>
 </div>
 
 

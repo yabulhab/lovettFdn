@@ -1,42 +1,14 @@
-body {
-  min-width: 100%; }
+html {
+  position: relative; }
 
-.main {
-  position: relative;
-  margin-bottom: 100px;
-  z-index: 0;
-  width: 100%; }
+a {
+  text-decoration: none;
+  color: #ffffff; }
 
-.main#indexBod {
-  position: relative;
-  top: 140px;
-  margin-bottom: 100px;
-  z-index: 0;
-  width: 100%; }
-
-.topBar {
-  height: 80px;
-  min-width: 100%;
-  z-index: 2;
-  position: fixed; }
-
-.darkContainer {
-  background-color: #F3F3F3;
-  margin-top: 50px;
-  width: 100%; }
-
-.containerContent {
-  padding: 100px; }
-
-.noPadding {
-  padding-left: 0px !important;
-  padding-right: 0px !important; }
-
-.centered {
-  margin: 0 auto; }
-
-.bottomMargin {
-  margin-bottom: 50px; }
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff; }
 
 hr {
   color: #3D1C53;
@@ -44,25 +16,136 @@ hr {
   height: 1px;
   background-color: #3D1C53; }
 
-a:hover {
-  cursor: pointer; }
-
 button:hover {
   cursor: pointer; }
+
+h1 {
+  font-family: "freight-display-pro";
+  font-size: 400%;
+  font-weight: 400;
+  text-align: right;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  z-index: 1; }
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "freight-display-pro";
+  font-weight: 300;
+  font-size: 250%;
+  color: #880A04; }
+
+h3 {
+  font-family: "freight-display-pro";
+  font-size: 250%;
+  font-weight: 300;
+  color: #3D1C53;
+  padding-left: 15px; }
+
+h4 {
+  font-family: "source-sans-pro";
+  font-size: 150%;
+  font-weight: 600; }
+
+p {
+  font-family: "source-sans-pro";
+  font-weight: 400;
+  font-size: 18px; }
+
+ul.dropdown-menu {
+  border: none;
+  border-radius: none;
+  background-color: white;
+  font-family: "freight-display-pro";
+  font-size: 250%;
+  font-weight: 300;
+  color: #3D1C53;
+  width: 100%;
+  text-align: left; }
+
+.main {
+  position: relative;
+  margin-bottom: 100px;
+  z-index: -1;
+  transition: margin-right 0.5s; }
+
+.main#index {
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  z-index: 0; }
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px; }
+
+#bodyOverlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none; }
+
+#about-mission {
+  margin-top: 50px;
+  background-color: #e0e0e0; }
+
+.containerContent {
+  padding: 25px 100px 25px 125px; }
+
+.noPadding {
+  padding-left: 0px !important;
+  padding-right: 0px !important; }
+
+.bottomMargin {
+  margin-bottom: 50px; }
+
+.centered {
+  margin: 0 auto; }
 
 .showing {
   display: inline; }
 
 .logo {
-  width: 15%;
-  display: inline;
+  width: 30%;
   margin-top: 15px;
-  float: left; }
+  padding-left: 40px;
+  z-index: 3;
+  display: inline-block;
+  order: 1; }
+
+.sucImg {
+  width: 100%; }
+
+#tagline {
+  font-size: 1.3vw; }
+
+.gridImg {
+  max-width: 100%;
+  z-index: -1;
+  padding: 2px;
+  position: relative; }
+
+.gridBlock {
+  padding: 0px;
+  position: relative;
+  min-height: 100%; }
+
+#headerAndMenu {
+  display: inline-flex;
+  align-content: center; }
 
 .menuTrigger {
   margin-top: 15px;
-  float: right;
-  position: relative; }
+  right: 0px;
+  position: fixed;
+  z-index: 4;
+  padding-right: 40px;
+  order: 2; }
 
 .menuTrigger:hover {
   cursor: pointer; }
@@ -75,10 +158,11 @@ button:hover {
   font-weight: 700;
   font-style: normal;
   font-size: 30px;
-  padding-right: 8px; }
+  padding-right: 8px;
+  opacity: 1; }
 
-#menuWord.open {
-  color: #ffffff;
+#menuWord .open {
+  color: black;
   font-weight: 600; }
 
 .burger {
@@ -145,70 +229,34 @@ button:hover {
   background-color: #ffffff; }
 
 .menu {
-  min-height: 100%;
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 3;
   background-color: #880A04;
   color: #ffffff;
-  position: fixed;
   top: 0px;
   right: 0px;
-  bottom: 0px;
-  z-index: 1;
+  transition: 0.2s;
   text-align: right;
-  padding-top: 150px;
-  width: 360px; }
+  box-shadow: -3px 0px 10px #000000; }
 
-.menu.container {
-  position: fixed !important; }
-
-ul {
-  padding-left: 0px; }
-
-.menuItem {
+.menu a {
   text-decoration: none;
-  list-style-type: none;
   font-family: "source-sans-pro";
   font-size: 20px;
   font-weight: 300;
   background-color: #880A04;
-  min-width: 100%;
+  display: block;
   padding: 20px;
-  padding-right: 50px; }
+  padding-right: 50px;
+  transition: 0s; }
 
-.menuItem:hover {
+.menu a:hover {
   background-color: #6E0A04; }
 
-h1 {
-  font-family: "freight-display-pro";
-  font-size: 400%;
-  font-weight: 400;
-  text-align: right;
-  margin-top: 0px;
-  margin-bottom: 8px;
-  z-index: 1; }
-
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-family: "freight-display-pro";
-  font-weight: 300;
-  font-size: 250%;
-  color: #880A04; }
-
-h3 {
-  font-family: "freight-display-pro";
-  font-size: 250%;
-  font-weight: 300;
-  color: #3D1C53; }
-
-h4 {
-  font-family: "source-sans-pro";
-  font-size: 150%;
-  font-weight: 600; }
-
-p {
-  font-family: "source-sans-pro";
-  font-weight: 400;
-  font-size: 18px; }
+#menuLinksGroup {
+  padding-top: 150px; }
 
 #scrollDown {
   z-index: 2;
@@ -225,15 +273,19 @@ p {
   font-family: "source-sans-pro";
   font-weight: 600;
   font-size: 200%;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  z-index: 1; }
 
 .redBtn:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  background-color: #880A04;
+  color: #ffffff; }
 
 #homeBtn {
   margin-top: 40px;
   padding-left: 20px;
-  padding-right: 20px; }
+  padding-right: 20px;
+  float: right; }
 
 .imageBtn {
   background-color: rgba(0, 0, 0, 0.4);
@@ -256,10 +308,19 @@ p {
   cursor: pointer; }
 
 .applyBtn {
+  display: block;
+  border: 3px solid;
+  border-color: #880A04;
+  color: #880A04;
+  font-family: "source-sans-pro";
+  font-weight: 600;
+  font-size: 200%;
+  background-color: #ffffff;
+  z-index: 1;
   margin-bottom: 25px;
   padding-left: 5%;
   padding-right: 5%;
-  width: 40%; }
+  width: 60%; }
 
 .btn.purpleDropdown {
   border: none;
@@ -272,45 +333,8 @@ p {
   width: 100%;
   text-align: left; }
 
-ul.dropdown-menu {
-  border: none;
-  border-radius: none;
-  background-color: white;
-  font-family: "freight-display-pro";
-  font-size: 250%;
-  font-weight: 300;
-  color: #3D1C53;
-  width: 100%;
-  text-align: left; }
-
 .caret {
   align: right; }
-
-.gridImg {
-  max-width: 100%;
-  z-index: -1;
-  padding: 2px;
-  position: relative; }
-
-.gridBlock {
-  padding: 0px;
-  margin: 0px;
-  position: relative; }
-
-.sucImg {
-  width: 100%; }
-
-#indexImg {
-  display: none; }
-
-a {
-  text-decoration: none;
-  color: #ffffff; }
-
-a:hover {
-  text-decoration: none;
-  cursor: pointer;
-  color: #ffffff; }
 
 h3:before {
   display: block;
@@ -330,60 +354,44 @@ h3:before {
     width: 60%; } }
 @media screen and (max-width: 767px) {
   .containerContent {
-    padding: 10px; }
+    padding: 30px; }
 
   h1 {
-    text-align: center;
-    top: 50%;
-    margin-top: 80px; }
+    text-align: center; }
 
-  .main {
-    min-width: 100%;
-    top: 140px; }
+  #tagline {
+    font-size: 3vw; }
 
-  .main#indexBod {
-    top: 0px; }
-
-  .topBar {
-    min-width: 100%;
-    position: absolute; }
+  #homeBtn {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    float: none; }
 
   .redBtn {
-    min-width: 100%;
-    margin: 0px;
+    width: 200px;
+    margin: 0 auto;
     padding: 15px;
     background-color: #880A04;
     color: #ffffff;
     font-weight: 600;
     display: block;
-    margin-top: 20px; }
+    float: none; }
 
-  .menu {
-    left: 0px;
-    min-width: 100%;
-    min-height: 100%;
-    position: absolute; }
+  .applyBtn {
+    margin-bottom: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 60%;
+    font-size: 1.3em; }
 
-  .tagline {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    display: none; }
+  #tagline {
+    padding: 30px; }
 
   .noPad {
     padding-left: 0px !important;
     padding-right: 0px !important; }
-
-  .logo {
-    width: 50%; }
-
-  #indexImg {
-    display: block;
-    z-index: -1;
-    width: 100%;
-    position: absolute; }
-
-  #homeBtn {
-    margin-top: 60%; }
 
   #scrollDown {
     display: none; } }
