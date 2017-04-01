@@ -22,7 +22,7 @@ lovettApp.controller("MenuCtrl", function($scope) {
 		}	
 		$scope.closeMenu = function(){
 			document.getElementById("myMenu").style.width = "0";
-			document.body.style.backgroundColor = "white";
+			document.body.style.backgroundColor = ("$background");
 			document.getElementById("menuWord").style.color = "black";
 			document.getElementById("bodyOverlay").style.display = "none";
 			($scope.burger).removeClass('open');
