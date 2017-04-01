@@ -49,9 +49,9 @@ lovettApp.controller("MenuCtrl", function($scope) {
 });	
 
 
-var scrollDown = function(){
-	$('html, body').animate({scrollTop: $('#about-mission').offset().top}, 100);
-};
+// var scrollDown = function(){
+// 	$('html, body').animate({scrollTop: $('#about-mission').offset().top}, 100);
+// };
 
 
 

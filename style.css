@@ -314,12 +314,17 @@ ul.dropdown-menu {
   font-family: "source-sans-pro";
   font-weight: 600;
   font-size: 200%;
-  background-color: #ffffff;
+  background-color: #f8fafd;
   z-index: 1;
   margin-bottom: 25px;
   padding-left: 5%;
   padding-right: 5%;
   width: 60%; }
+
+.applyBtn:hover {
+  cursor: pointer;
+  background-color: #880A04;
+  color: #ffffff; }
 
 .btn.purpleDropdown {
   border: none;
