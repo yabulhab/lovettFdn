@@ -1,6 +1,9 @@
 html {
   position: relative; }
 
+body {
+  background-color: #f8fafd; }
+
 a {
   text-decoration: none;
   color: #ffffff; }
@@ -90,12 +93,8 @@ ul.dropdown-menu {
   left: 0;
   display: none; }
 
-#about-mission {
-  margin-top: 50px;
-  background-color: #e0e0e0; }
-
 .containerContent {
-  padding: 25px 100px 25px 125px; }
+  padding: 50px 100px 50px 100px; }
 
 .noPadding {
   padding-left: 0px !important;
@@ -273,7 +272,7 @@ ul.dropdown-menu {
   font-family: "source-sans-pro";
   font-weight: 600;
   font-size: 200%;
-  background-color: #ffffff;
+  background-color: #f8fafd;
   z-index: 1; }
 
 .redBtn:hover {
