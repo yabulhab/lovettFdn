@@ -1,6 +1,5 @@
 var lovettApp = angular.module('lovettApp', []);
 
-
 lovettApp.controller("homeCtrl", function($scope) {
 //this function is listening for the size of the window and doing an appropriate true: false situation
 	$(window).resize(function(){
@@ -9,7 +8,7 @@ lovettApp.controller("homeCtrl", function($scope) {
 		$scope.$apply(function(){
 		});
 	});
-});
+});//end homeCtrl
 
 lovettApp.controller("MenuCtrl", function($scope) {
 
@@ -49,13 +48,12 @@ lovettApp.controller("MenuCtrl", function($scope) {
 		});
 });	
 
-// lovettApp.controller("LogoCtrl", function($scope) {
-
-// });
 
 var scrollDown = function(){
 	$('html, body').animate({scrollTop: $('#about-mission').offset().top}, 100);
 };
+
+
 
 
 
