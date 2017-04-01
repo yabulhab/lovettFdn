@@ -1,24 +1,32 @@
 
 <div ng-controller="MenuCtrl">
-	<!-- menu -->
-	<div ng-show="visibleMenu"  class="menu">
-		<div class="menuHead">
-			Menu
+	<div id="theWholeMenu">
+		<span ng-click="triggerClick()">
+			<div class="menuTrigger pull-right">
+				<div id="menuWord" >
+					menu
+				</div>
+					<div class="burger" id="burg">
+					<span id="s0" ></span>
+					<span id="s1" ></span>
+					<span id="s2" ></span>
+					</div>
+			</div>
+		</span>	
+		
+		<!-- menu -->
+
+		<div class="menu" id="myMenu">
+			<div id="menuLinksGroup">
+				<a href="index.html">home</a>
+				<a href="about.html">about</a>
+				<a href="successes.html">success stories</a>
+				<a href="elementaryDramaFund.html">elementary drama fund</a>
+				<a href="apply.html">apply</a>
+			</div>
 		</div>
-		<ul>
-			<li class="menuItem">about</li>
-			<li class="menuItem">success stories</li>
-			<li class="menuItem">elementary drama fund</li>
-			<li class="menuItem">apply</li>
-		</ul>
-	</div>	
-
-	<!-- menu trigger -->
-	<div ng-click="toggleFunc()" class="menuTrigger">
-		<p>MENU</p>
-		<img id="icon" src="./icon.png"> 
 	</div>
-
+	<div id="bodyOverlay"></div>
 </div>
 
 

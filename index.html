@@ -2,20 +2,77 @@
 <html>
 <head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>	
-<script src="./script.js"></script>
-<link rel="stylesheet" href="./style.css" type="text/css">
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<script src="https://use.typekit.net/odg7zar.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script   src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>	
+	<script src="js/script.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width; initial-scale=1, maximum-scale=1;">
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="./style.css" type="text/css">
 
 </head>
 
-<body ng-app="lovettApp">
-	<div ng-include src="'templates/menu.html'"></div>
-	<div ng-include src="'templates/home.html'"></div>
+<body ng-app="lovettApp" ngCloak>
+	<div ng-include src="'templates/header.html'"></div> 
+	<!-- main content -->
+	<div class="main" id="index">
+		<div class="row">
+			<div class="col-sm-4 col-xs-12 noPad">
+				<div id="tagline">
+					<h1>Small grants for big change.</h1>
+				</div>
+				<a href="./apply.html">
+					<button class="redBtn" id="homeBtn">
+						APPLY
+					</button>
+				</a>
+	<!-- 			<div>success stories</div> -->
+			</div>
 
-	<h1>Testing</h1>
-
-
+			<div class="col-sm-7 col-xs-12">
+				<div class="gridBlock col-sm-4 col-xs-6">
+					<a href="successes.html#/#education" onclick="addMargin()">
+						<img src ="assets/imgs/iStock_78562777.jpg" class="gridImg">
+						<div class="imageBtn">EDUCATION</div>
+					</a>
+				</div>
+				<div class="gridBlock col-sm-4 col-xs-6 ">
+					<a href="successes.html#/#arts">
+						<img src ="assets/imgs/iStock_96122167.jpg"class="gridImg">
+						<div class="imageBtn">THE ARTS</div>
+					</a>
+				</div>
+				<div class="gridBlock col-sm-4 col-xs-6">
+					<a href="successes.html">
+						<img src ="assets/imgs/iStock_68878869.jpg" class="gridImg">
+						<div class="imageBtn">WOMEN/FAMILY</div>
+					</a>
+				</div>
+				<div class="gridBlock col-sm-4 col-xs-6">
+					<a href="successes.html">
+						<img src ="assets/imgs/iStock_76966743.jpg" class="gridImg">
+						<div class="imageBtn">HOMELESSNESS</div>
+					</a>
+				</div>
+				<div class="gridBlock col-sm-4 col-xs-6">
+					<a href="successes.html#/#aidsSupport">
+						<img src ="assets/imgs/iStock_74255107.jpg" class="gridImg">
+						<div class="imageBtn">AIDS SUPPORT & LGBTQ ISSUES</div>
+					</a>
+				</div>
+				<div class="gridBlock col-sm-4 col-xs-6">
+					<a href="successes.html">
+						<img src ="assets/imgs/iStock_91205743.jpg" class="gridImg">
+						<div class="imageBtn">ENVIRONMENT</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-1 col-xs-12"></div>
+		</div> <!--row-->
+	</div>
 </body>
 
 </html>
